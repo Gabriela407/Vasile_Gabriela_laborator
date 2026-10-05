@@ -3,70 +3,147 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    background-color: #fdf5f7;
+    color: #4a4a4a;
 }
 
-/* 1. Antet cu Flexbox */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 32px;
-    background-color: #1f3b5d;
-    color: #ffffff;
+    padding: 20px 40px;
+    background-color: #baddf9;
+    color: #2c3e50;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
 }
 
 .site-header a {
-    color: #ffffff;
+    color: #2c3e50;
     text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.site-header a:hover {
+    background-color: #ffdae9;
 }
 
 .menu {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
-/* 2. Formular vertical */
+main {
+    padding: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #8abced;
+    border-bottom: 2px dashed #ffdae9;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 450px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
 }
 
 label {
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #666;
 }
 
 input, select, button {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 input:focus, select:focus {
-    outline: 2px solid #5b3fd9;
+    outline: 2px solid #baddf9;
+    border-color: transparent;
 }
 
-/* 3. și 4. Carduri Grid și clasa featured */
+button {
+    margin-top: 30px;
+    background-color: #ffdae9;
+    color: #2c3e50;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 218, 233, 0.8);
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 30px;
 }
 
 .card {
-    padding: 20px;
-    border: 1px solid #d0d7e2;
-    border-radius: 10px;
+    padding: 25px;
+    border: none;
+    border-radius: 15px;
     background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(186, 221, 249, 0.6);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #8abced;
 }
 
 .card.featured {
-    border: 2px solid #5b3fd9;
-    background-color: #eef4fa;
+    background-color: #ffdae9;
+    border: 2px solid #fcaed0;
+}
+
+.card.featured h3 {
+    color: #d15c8f;
+}
+
+.card.featured p {
+    color: #5a3c49;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #baddf9;
+    color: #2c3e50;
+    margin-top: 50px;
+    font-weight: 500;
 }
